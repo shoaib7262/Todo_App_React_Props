@@ -26,6 +26,7 @@
 }
 .button
 {
+    background-color:rgb(199, 201, 214);
     width: 100%;
     border-radius: 0;
     margin-bottom: 5px;
@@ -88,7 +89,7 @@
 
 .outer-card
 {
-    width:90%;
+    width:800px;
     height:auto;
     display:flex;
     align-items:center;
@@ -97,7 +98,7 @@
 }
 .card
 {
-    width: 90%;
+    width: 100%;
     background-color:rgb(199, 201, 214);
     border:0px;
 }
@@ -146,8 +147,22 @@
 .outer-card:hover
 {
     transform: translateY(5px);
+    transition:all 0.5s ease-out;
+   
+}
+.outer-card:hover
+.card
+{
+    background-color:#d85177;
+    color: white;
 }
 
+.button:active,
+.button:focus
+{
+    border-left: 5px solid #e62e63;
+    
+}
 
 
 

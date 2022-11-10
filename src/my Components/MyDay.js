@@ -1,12 +1,18 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 const MyDay = (props) => {
-  const {deletItem} = props
+  const {deletItem} = props;
+  const {favrotIcon} = props;
   useEffect(() => {
   
   }, [props]);
   const onDelet =(id)=>{
     deletItem(id)
+  }
+
+  const importantIcon =(id)=>{
+    favrotIcon(id);
+    
   }
    
   return (
@@ -37,7 +43,7 @@ const MyDay = (props) => {
                       <div className="inerDiv">
                         <div>
                           <button id="heartIcon">
-                            <i className="fa-solid fa-heart"></i>
+                            {item.liked ? <i onClick={()=>importantIcon (item.id)} className="fa-solid fa-heart"></i> : <i onClick={()=>importantIcon (item.id)} className="fa-regular fa-heart"></i>}
                           </button>
                         </div>
                       </div>

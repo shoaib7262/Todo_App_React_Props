@@ -9,19 +9,19 @@ const SideNavbar = () => {
     <div >
       <div className="sideNavbar">
         <Picture />
-        <Link to='/' className="btn button  btn-secondary">
+        <Link to='/' className="btn button  ">
           <i className="fa-solid fa-tag"></i> My Day
         </Link>
 
-        <Link to='/important' className="btn button  btn-secondary">
+        <Link to='/important' className="btn button  ">
           <i className="fa-solid fa-tag"></i> Important
         </Link>
 
-        <Link to='/donetask' className="btn button  btn-secondary">
+        <Link to='/donetask' className="btn button  ">
           <i className="fa-solid fa-tag"></i> Done Task
         </Link>
 
-        <Link to='/comingtask' className="btn button  btn-secondary">
+        <Link to='/comingtask' className="btn button  ">
           <i className="fa-solid fa-tag"></i> Coming Task
         </Link>
 

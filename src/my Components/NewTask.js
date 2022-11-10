@@ -10,7 +10,8 @@ const NewTask = (props) => {
 
   function onSubmit(){
     let data  = {id:(new Date()).getTime(),
-      Title, Discription }
+      Title, Discription,
+      liked:false, }
 
     if(!Title || !Discription){
       alert("please fill requirments*")

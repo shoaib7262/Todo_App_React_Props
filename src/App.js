@@ -23,9 +23,29 @@ function App() {
  
   const deletItem =(todoItem)=>{
     let newArr = tasks.filter((item)=> item.id !== todoItem )
-    console.log(todoItem)
+    
     setTasks(newArr)
   
+  }
+
+  const favrotIcon =(favItem)=>{
+   
+    let newTask = tasks.map((item)=>{
+      
+      if(item.id === favItem){
+        
+        return{
+          ...item,
+          liked: !item.liked,
+        };
+      }else{
+        return item;
+      }
+      
+      
+    })
+    setTasks(newTask);
+    
   }
 
   return (
@@ -34,9 +54,9 @@ function App() {
           <SideNavbar />
          
           <Routes>
-          <Route path="/" element={<MyDay tasks={tasks} deletItem={deletItem} />}  />
+          <Route path="/" element={<MyDay tasks={tasks} deletItem={deletItem} favrotIcon={favrotIcon} />}  />
           <Route path="/comingtask" element={<CommingTask />} />
-          <Route path="/important" element={<Important />} />
+          <Route path="/important" element={<Important tasks={tasks} deletItem={deletItem} />} />
           <Route path="/donetask" element={<DoneTask />} />
           <Route path="/addtask" element={<NewTask addTask={addTask} />} />
 
